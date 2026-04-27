@@ -10,6 +10,31 @@
   <meta property="og:url" content="https://arcadiaswsystemsinc.github.io/pixelpulse/" />
   <base href="/ArcadiaSWSystems-site/" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .pp-screenshots {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      aspect-ratio: 16 / 10;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(37, 99, 168, 0.2);
+    }
+    .pp-shot {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @keyframes pp-crossfade {
+      0%,  40% { opacity: 1; }
+      50%, 90% { opacity: 0; }
+      100%     { opacity: 1; }
+    }
+    .pp-shot-1 { animation: pp-crossfade 8s infinite; }
+    .pp-shot-2 { animation: pp-crossfade 8s infinite -4s; }
+  </style>
 </head>
 <body>
 
@@ -40,8 +65,11 @@
             <a href="privacy/" class="btn btn-secondary">Privacy Policy</a>
           </div>
         </div>
-        <div style="display: flex; justify-content: center;">
-          <img src="pixelpulse/icon.png" alt="PixelPulse app icon" style="width: 240px; height: 240px; border-radius: 56px; box-shadow: 0 24px 80px rgba(37,99,168,0.3);" />
+        <div style="display: flex; justify-content: center; align-items: flex-start;">
+          <div class="pp-screenshots">
+            <img src="pixelpulse/hero1.png" alt="PixelPulse screenshot 1" class="pp-shot pp-shot-1" />
+            <img src="pixelpulse/hero2.png" alt="PixelPulse screenshot 2" class="pp-shot pp-shot-2" />
+          </div>
         </div>
       </section>
 

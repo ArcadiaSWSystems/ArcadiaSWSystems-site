@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CityGrid — Arcadia SW Systems</title>
+  <meta name="description" content="CityGrid is a live Toronto open-data map built by Arcadia SW Systems: transit, bike share, closures, alerts, civic services, and privacy-first analytics in one PWA." />
+  <meta property="og:title" content="CityGrid — Toronto, live right now" />
+  <meta property="og:description" content="A live, glanceable Toronto map built on open civic data." />
+  <meta property="og:image" content="https://arcadiaswsystemsinc.github.io/citygrid/og-card.png" />
+  <meta property="og:url" content="https://arcadiaswsystemsinc.github.io/citygrid/" />
+  <base href="/" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="citygrid-case">
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">Arcadia <span>SW</span></a>
+      <ul class="nav-links">
+        <li><a href="/#apps">Work</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="mailto:arcadiaswsystems@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="case-hero">
+      <div class="case-hero-bg">
+        <img src="citygrid/app.png" alt="" />
+      </div>
+      <div class="case-hero-content">
+        <span class="case-hero-label"><span class="case-live-dot"></span>Live civic product</span>
+        <h1>CityGrid</h1>
+        <p class="case-hero-sub">Toronto, live right now. A full-screen open-data map that helps people understand transit, closures, weather, public services, and local conditions without creating an account.</p>
+        <div class="btn-group case-hero-actions">
+          <a href="https://citygrid.ca" class="btn btn-city" target="_blank" rel="noopener noreferrer">Open citygrid.ca</a>
+          <a href="mailto:arcadiaswsystems@gmail.com" class="btn btn-dark">Talk civic data</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-stats-band" aria-label="CityGrid project facts">
+      <div class="case-stats">
+        <div>
+          <strong>Updated</strong>
+          <span>July 3, 2026</span>
+        </div>
+        <div>
+          <strong>28</strong>
+          <span>production data layers</span>
+        </div>
+        <div>
+          <strong>9,480</strong>
+          <span>TTC stops with live arrivals</span>
+        </div>
+        <div>
+          <strong>PWA</strong>
+          <span>installable, no login required</span>
+        </div>
+        <div>
+          <strong>Open data</strong>
+          <span>Toronto, Ontario, TTC, Metrolinx, OSM, ECCC</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-head">
+        <p class="section-label">What shipped</p>
+        <h2 class="section-title">A living map, not a directory.</h2>
+        <p class="case-lede">CityGrid opens directly into the product. No landing page, no account wall, no dashboard maze. The map is already alive with public infrastructure data, and every layer carries a reliability signal so users know whether they are seeing live data, a recent snapshot, or an insights layer.</p>
+      </div>
+
+      <div class="case-feature-grid">
+        <div class="case-feature">
+          <h3>Live movement</h3>
+          <p>TTC vehicles, stop-level arrivals, Metrolinx GO/UP positions, Bike Share availability, subway/LRT lines, road restrictions, and highway incidents in one city-scale view.</p>
+        </div>
+        <div class="case-feature">
+          <h3>Tap-anywhere context</h3>
+          <p>Click a place and CityGrid assembles the nearby layers into a useful card instead of forcing people to inspect each dataset separately.</p>
+        </div>
+        <div class="case-feature">
+          <h3>Emergency mode</h3>
+          <p>Weather warnings can surface a crisis banner and switch the map toward alerts, closures, air quality, cool spaces, and essential services.</p>
+        </div>
+        <div class="case-feature">
+          <h3>Personal transit alerts</h3>
+          <p>Users can ask for anonymous browser push notifications before a bus or streetcar reaches a stop. No CityGrid account is needed.</p>
+        </div>
+        <div class="case-feature">
+          <h3>Privacy-first analytics</h3>
+          <p>Cookieless, first-party metrics measure reach without raw IPs, search text, third-party trackers, or personal profiles.</p>
+        </div>
+        <div class="case-feature">
+          <h3>Enterprise-ready core</h3>
+          <p>The Fastify data engine normalizes every source into stable GeoJSON so future city or operations dashboards can use the same spine.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-visual-band">
+      <div class="case-section">
+        <div class="case-section-head">
+          <p class="section-label">Product detail</p>
+          <h2 class="section-title">Screens that prove the system.</h2>
+          <p class="case-lede">The interface stays focused on the map while exposing deeper workflows only when they are useful: stop cards, alert setup, insights, layers, and mobile operation.</p>
+        </div>
+
+        <div class="case-shot-grid">
+          <figure class="case-shot case-shot-wide">
+            <img src="citygrid/stop-card.png" alt="CityGrid stop card showing live TTC arrivals and a weather alert" />
+            <figcaption>
+              <strong>Stop-level context</strong>
+              <span>Tap a TTC stop to see next arrivals, alerts affecting the area, and a direct path into notification setup.</span>
+            </figcaption>
+          </figure>
+          <figure class="case-shot case-shot-wide">
+            <img src="citygrid/alert-composer.png" alt="CityGrid alert composer for anonymous transit push notifications" />
+            <figcaption>
+              <strong>Anonymous alerts</strong>
+              <span>Route, timing, and recurrence controls are tied to the browser subscription instead of a user account.</span>
+            </figcaption>
+          </figure>
+          <figure class="case-shot case-shot-wide">
+            <img src="citygrid/insights.png" alt="CityGrid insights panel over the live Toronto map" />
+            <figcaption>
+              <strong>Civic context</strong>
+              <span>The insights panel explains sources, caveats, counts, and provenance so open data stays honest.</span>
+            </figcaption>
+          </figure>
+          <figure class="case-shot case-shot-mobile">
+            <img src="citygrid/mobile.png" alt="CityGrid mobile layout with controls around the live Toronto map" />
+            <figcaption>
+              <strong>Mobile-first utility</strong>
+              <span>The PWA keeps search, status, layers, and map controls reachable on a phone.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section case-build">
+      <div class="case-section-head">
+        <p class="section-label">Build quality</p>
+        <h2 class="section-title">Designed to survive real civic data.</h2>
+        <p class="case-lede">The hard part is not drawing dots on a map. The hard part is making dozens of uneven public feeds feel coherent, fast, and trustworthy.</p>
+      </div>
+
+      <div class="case-proof-grid">
+        <div class="case-proof">
+          <span>01</span>
+          <h3>Normalized data spine</h3>
+          <p>Each source is polled, cleaned, cached, and served through a stable GeoJSON layer API, so the UI does not inherit every upstream quirk.</p>
+        </div>
+        <div class="case-proof">
+          <span>02</span>
+          <h3>Freshness and fallbacks</h3>
+          <p>Layer metadata exposes age, status, reliability, and errors. Last-good cache behavior keeps the map useful during temporary feed trouble.</p>
+        </div>
+        <div class="case-proof">
+          <span>03</span>
+          <h3>Performance work</h3>
+          <p>Large layer responses are pre-compressed once per refresh, turning repeated map/API traffic into a mostly network-bound operation.</p>
+        </div>
+        <div class="case-proof">
+          <span>04</span>
+          <h3>Accessible by default</h3>
+          <p>The project includes keyboard-conscious panels, mobile layouts, accessibility checks, and no-login access to the public experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-data-band">
+      <div class="case-section">
+        <div class="case-section-head">
+          <p class="section-label">Coverage</p>
+          <h2 class="section-title">A city-scale open-data surface.</h2>
+        </div>
+        <div class="case-layer-list">
+          <span>Transit</span>
+          <span>TTC stops</span>
+          <span>Bike Share</span>
+          <span>GO/UP</span>
+          <span>Closures</span>
+          <span>Highway incidents</span>
+          <span>Traffic cameras</span>
+          <span>Weather alerts</span>
+          <span>Air quality</span>
+          <span>Parks</span>
+          <span>Libraries</span>
+          <span>Beaches</span>
+          <span>Public washrooms</span>
+          <span>Child care</span>
+          <span>Hospitals</span>
+          <span>Fire stations</span>
+          <span>Police facilities</span>
+          <span>DineSafe</span>
+          <span>RentSafeTO</span>
+          <span>Public art</span>
+          <span>EV charging</span>
+          <span>Income insights</span>
+          <span>Collisions</span>
+          <span>Crime insights</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-cta-band">
+      <div class="case-cta-inner">
+        <img src="citygrid/icon.png" alt="" />
+        <div>
+          <p class="section-label">CityGrid</p>
+          <h2>Toronto's public infrastructure, live on one map.</h2>
+          <p>Free for the public to use, built as the proof point for deeper civic and operations integrations.</p>
+        </div>
+        <div class="btn-group case-cta-actions">
+          <a href="https://citygrid.ca" class="btn btn-city" target="_blank" rel="noopener noreferrer">Launch CityGrid</a>
+          <a href="mailto:arcadiaswsystems@gmail.com" class="btn btn-dark">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Arcadia SW Systems Inc.</strong> — Canada<br>
+        <a href="mailto:arcadiaswsystems@gmail.com" style="color: inherit;">arcadiaswsystems@gmail.com</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="https://citygrid.ca" target="_blank" rel="noopener noreferrer">CityGrid</a></li>
+        <li><a href="mailto:arcadiaswsystems@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

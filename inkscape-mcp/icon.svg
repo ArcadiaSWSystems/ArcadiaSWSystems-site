@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Inkscape MCP icon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a5c" />
+      <stop offset="60%" stop-color="#2563a8" />
+      <stop offset="100%" stop-color="#6fa8dc" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)" />
+
+  <!-- pen-tool bezier path: anchor -> handle -> handle -> anchor -->
+  <path d="M166,366 C166,216 216,166 366,166" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" opacity="0.95" />
+
+  <!-- handle guide lines -->
+  <line x1="166" y1="366" x2="166" y2="216" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.5" />
+  <line x1="366" y1="166" x2="216" y2="166" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.5" />
+
+  <!-- handle nodes (control points) -->
+  <circle cx="166" cy="216" r="17" fill="#ffffff" opacity="0.65" />
+  <circle cx="216" cy="166" r="17" fill="#ffffff" opacity="0.65" />
+
+  <!-- anchor nodes (endpoints) -->
+  <rect x="143" y="343" width="46" height="46" rx="10" fill="#ffffff" />
+  <rect x="343" y="143" width="46" height="46" rx="10" fill="#ffffff" />
+</svg>

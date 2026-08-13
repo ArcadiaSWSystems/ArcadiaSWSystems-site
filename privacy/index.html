@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Arcadia SW Systems Inc.</title>
-  <meta name="description" content="Privacy policy for Arcadia SW Systems Inc. and our apps, including QR Cute, Checkpoints, PixelPulse Groovebox, and CityGrid. We collect no personal data across any of our apps." />
+  <meta name="description" content="Privacy policy for Arcadia SW Systems Inc. and our apps, including QR Cute, Checkpoints, PixelPulse Groovebox, CityGrid, and Agent Fi for Mac." />
   <base href="/" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -26,12 +26,12 @@
       <div class="prose">
 
         <h1>Privacy Policy</h1>
-        <p class="meta">Arcadia SW Systems Inc. &nbsp;·&nbsp; Last updated: August 2026</p>
+        <p class="meta">Arcadia SW Systems Inc. &nbsp;·&nbsp; Last updated: August 4, 2026</p>
 
         <hr>
 
         <h2>Overview</h2>
-        <p>This Privacy Policy applies to Arcadia SW Systems Inc. ("we", "us", "our") and the apps we publish — including <strong>QR Cute</strong>, <strong>Checkpoints</strong>, <strong>PixelPulse Groovebox</strong>, and <strong>CityGrid</strong> — as well as this website. None of our apps require an account, and none of them collect personal information about you. Most of our apps run entirely on your device and never contact a server at all; CityGrid is the one exception, described below.</p>
+        <p>This Privacy Policy applies to Arcadia SW Systems Inc. ("we", "us", "our") and the apps we publish — including <strong>QR Cute</strong>, <strong>Checkpoints</strong>, <strong>PixelPulse Groovebox</strong>, <strong>CityGrid</strong>, and <strong>Agent Fi for Mac</strong> — as well as this website. None of our apps require an account. Most of our apps run entirely on your device and never contact a server at all. Two apps work differently, and are described in their own sections below: <strong>CityGrid</strong>, which is a hosted web app with a public-data backend, and <strong>Agent Fi</strong>, which is local-first but can optionally connect to AI providers and other services you configure yourself.</p>
         <p>Where a practice is specific to one app — such as an optional permission or integration — that is called out below.</p>
 
         <hr>
@@ -42,24 +42,54 @@
           <li><strong>Checkpoints</strong> — local version history for folders, for Mac</li>
           <li><strong>PixelPulse Groovebox</strong> — 8-bit and lo-fi music groovebox for Mac</li>
           <li><strong>CityGrid</strong> — live, open-data map of Toronto (web app at <a href="https://citygrid.ca" target="_blank" rel="noopener noreferrer">citygrid.ca</a>)</li>
+          <li><strong>Agent Fi for Mac</strong> — local-first AI assistant for program and project managers</li>
         </ul>
 
         <hr>
 
         <h2>Data We Collect</h2>
-        <p>None of our apps require an account, login, or any personal information such as your name or email address.</p>
+        <p>None of our apps require an account or login.</p>
         <p><strong>QR Cute, Checkpoints, and PixelPulse Groovebox</strong> collect no data at all — they run entirely on your device and never send anything to a server. They do not track your location, use analytics or crash-reporting tools, or display advertising.</p>
-        <p><strong>CityGrid</strong> is a live web app with a server backend that serves public open-data feeds (transit, weather, closures, and similar civic data). It does not collect personal data either, but — unlike our other apps — it does use:</p>
+        <p><strong>CityGrid</strong> is a live web app with a server backend that serves public open-data feeds (transit, weather, closures, and similar civic data). It does not collect personal data either, but — unlike our fully local apps — it does use:</p>
         <ul>
           <li><strong>Cookieless, first-party analytics</strong> — aggregate usage metrics, without raw IP addresses, search text, third-party trackers, or personal profiles, to understand overall reach</li>
           <li><strong>Anonymous push notifications</strong> — if you opt in to a transit alert, your browser creates a push subscription used only to deliver that alert; it's tied to your browser, not to an account or identity</li>
         </ul>
-        <p>None of our apps use third-party advertising or third-party tracking SDKs.</p>
+        <p><strong>Agent Fi for Mac</strong> is local-first, not local-only: by default nothing leaves your Mac, but if you connect a cloud AI provider or another external service, some data is sent to the destination you've configured. This is different enough from our other apps that it has its own section below — see <a href="#agent-fi">Agent Fi for Mac</a>.</p>
+        <p>None of our apps use third-party advertising or third-party tracking SDKs, and none of them sell your data.</p>
+
+        <hr>
+
+        <h2 id="agent-fi">Agent Fi for Mac</h2>
+        <p><strong>Agent Fi for Mac</strong> is a local-first AI assistant for program and project managers. Unlike our other apps, it is local-<em>first</em>, not local-only: it can run entirely offline with a local model, but it can also connect to AI providers and other services you configure, in which case those connections receive some of your data. This section describes exactly what can be sent, to whom, and under what conditions. <strong>Arcadia operates no server for Agent Fi and receives none of this data</strong> — everything below goes directly from your Mac to the destination you've configured.</p>
+
+        <h3 style="font-size: 16px; font-weight: 700; margin: 24px 0 8px;">Where your data can go</h3>
+        <ul>
+          <li><strong>OpenAI, Anthropic, or a custom OpenAI-compatible endpoint</strong> — if you add an API key in Settings → Models, your chat requests are sent to that provider. If you set a custom base URL (for example, a self-hosted or third-party gateway), requests go to that host instead — the destination is partly your own choice, and Agent Fi shows you exactly which host is configured.</li>
+          <li><strong>Atlassian (Jira and Confluence)</strong> — if you connect Jira or Confluence with your own site URL and API token, Agent Fi can read and write issues or pages on your instance. This is a separate, credentialed connection from your AI provider.</li>
+          <li><strong>MCP servers you configure</strong> — Agent Fi supports the Model Context Protocol. In the Mac App Store version, MCP connections are limited to remote servers over HTTPS that you add yourself; nothing connects automatically.</li>
+          <li><strong>Local models via Ollama</strong> — if you use a local model, requests go to Ollama running on your own Mac and never leave your device. This is the option that keeps Agent Fi fully offline.</li>
+        </ul>
+
+        <h3 style="font-size: 16px; font-weight: 700; margin: 24px 0 8px;">What can be sent, and when</h3>
+        <p>If you use a cloud provider (OpenAI, Anthropic, a custom endpoint, or MCP over HTTPS), by default only your typed message and the recent turns of that conversation are sent — nothing else.</p>
+        <p>The following are only ever included if you explicitly approve it, in Settings → Guardrails:</p>
+        <ul>
+          <li>Text from documents you've imported</li>
+          <li>Facts you've saved to durable memory</li>
+          <li>Calendar events and reminders, when you ask about them</li>
+          <li>The display name you've set for yourself</li>
+        </ul>
+        <p>You can grant or withdraw this approval at any time; both actions are recorded in Agent Fi's local audit log. Automatic memory extraction and session summaries run on your local model only and are never sent to a cloud provider as part of that process. If you use a local model exclusively, nothing at all leaves your Mac.</p>
+        <p>Jira and Confluence are a separate case: because that data already lives on a third-party server you connected yourself with your own credentials, reading it isn't gated the same way — but every write (creating or editing an issue or page) still requires your confirmation before it happens.</p>
+
+        <h3 style="font-size: 16px; font-weight: 700; margin: 24px 0 8px;">Retention and deletion</h3>
+        <p>Conversation history, memory, imported documents, integration settings, and the audit log are all stored locally in Agent Fi's app data on your Mac. Agent Fi gives you direct control to delete this data at any time: clear auto-extracted memories, session summaries, or all memories; clear imported documents; clear the audit log; or run a full factory reset that wipes all local app state and returns Agent Fi to its first-run state. None of this data is retained by us, because we never receive it.</p>
 
         <hr>
 
         <h2>Data Stored on Your Device</h2>
-        <p>This section applies to QR Cute, Checkpoints, and PixelPulse Groovebox. CityGrid is a hosted web app rather than a local app, so it's covered separately above and below.</p>
+        <p>This section applies to QR Cute, Checkpoints, and PixelPulse Groovebox. CityGrid is a hosted web app rather than a local app, so it's covered separately above. Agent Fi's local storage and deletion controls are covered in its dedicated section above.</p>
         <p>These apps store the content you create <strong>locally on your device only</strong>:</p>
         <ul>
           <li><strong>QR Cute</strong> — the QR code configurations you save (content, style settings, and any custom logo image), stored using Apple's SwiftData framework</li>
@@ -78,6 +108,9 @@
           <li><strong>Contacts (QR Cute)</strong> — QR Cute does not access your contacts. It only includes contact details you manually type into a vCard-style QR code.</li>
           <li><strong>Folder Access (Checkpoints)</strong> — Checkpoints only reads and writes within folders you explicitly add as a tracked project. It does not access other files on your Mac.</li>
           <li><strong>Browser Notifications (CityGrid)</strong> — if you opt in to a transit alert, CityGrid asks for permission to send browser push notifications. This is anonymous and tied to your browser subscription, not to a personal account, and you can revoke it at any time in your browser settings.</li>
+          <li><strong>Calendar &amp; Reminders (Agent Fi)</strong> — read and, with your confirmation, write access via Apple's EventKit, used only when you ask the agent about your schedule or reminders, or ask it to create or update one. This stays on your Mac and is only included in a request to a cloud provider if you've separately approved that category above.</li>
+          <li><strong>Document/Folder Access (Agent Fi)</strong> — Agent Fi only reads files and folders you explicitly choose via the system file picker. It does not browse your filesystem on its own.</li>
+          <li><strong>Microphone &amp; Speech Recognition (Agent Fi)</strong> — optional voice input. Your speech is transcribed on-device to fill the chat composer; the audio itself is never uploaded.</li>
           <li><strong>Camera</strong> — none of our apps access the camera.</li>
         </ul>
 
@@ -94,7 +127,7 @@
         <hr>
 
         <h2>Children's Privacy</h2>
-        <p>We do not knowingly collect any information from children under 13. None of our apps have user accounts or advertising, and none collect personal information.</p>
+        <p>We do not knowingly collect any information from children under 13. None of our apps have user accounts or use advertising, and none of them are directed at or designed for use by children.</p>
 
         <hr>
 

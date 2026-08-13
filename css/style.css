@@ -397,6 +397,38 @@ nav {
   align-self: flex-start;
 }
 
+.app-badge-pending {
+  background: rgba(217, 119, 6, 0.1);
+  color: #b45309;
+}
+
+/* ── Status pill (e.g. "Under App Store Review") ── */
+.btn-pending {
+  background: rgba(217, 119, 6, 0.1);
+  color: #b45309;
+  border: 1.5px solid rgba(217, 119, 6, 0.22);
+  cursor: default;
+}
+
+.btn.btn-pending:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.pending-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #d97706;
+  flex-shrink: 0;
+  animation: pending-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pending-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
 /* ── Values / about section ── */
 .about-section {
   padding: 60px 0 80px;

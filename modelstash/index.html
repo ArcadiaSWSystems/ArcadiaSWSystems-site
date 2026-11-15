@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ModelStash — Arcadia SW Systems</title>
+  <meta name="description" content="ModelStash is a self-hosted hub for your AI models. Pull from Hugging Face, Ollama and more once, keep every model's card, licence and samples, and serve them to every tool on your network. Coming soon for Mac, Windows and Linux." />
+  <meta property="og:title" content="ModelStash — your models, kept" />
+  <meta property="og:description" content="A self-hosted hub that stores your AI models locally and serves them to every tool on your network." />
+  <meta property="og:image" content="https://arcadiaswsystems.ca/modelstash/shot-lora.jpg" />
+  <meta property="og:url" content="https://arcadiaswsystems.ca/modelstash/" />
+  <base href="/" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">Arcadia <span>SW</span></a>
+      <ul class="nav-links">
+        <li><a href="/#apps">Work</a></li>
+        <li><a href="/#coming-soon">Coming soon</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="mailto:arcadiaswsystems@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page">
+
+      <!-- App Hero -->
+      <section class="app-hero">
+        <div>
+          <div class="app-hero-icon"><img src="modelstash/icon.svg" alt="ModelStash icon" /></div>
+          <h1>Model<span class="gradient-text">Stash</span></h1>
+          <p class="app-hero-sub">Your models, kept. A self-hosted hub for the AI models your network already uses: pull them once from Hugging Face, Ollama and more, keep each model's card, licence and samples even after upstream deletes them, and serve them to every tool you run. Nothing downloads the same 40 GB twice.</p>
+          <div class="btn-group" style="justify-content: flex-start;">
+            <span class="btn btn-pending" aria-label="Coming soon to Mac, Windows and Linux">
+              <span class="pending-dot"></span> Coming soon to Mac, Windows &amp; Linux
+            </span>
+            <a href="mailto:arcadiaswsystems@gmail.com?subject=ModelStash%20early%20access" class="btn btn-secondary">Get notified at launch</a>
+          </div>
+        </div>
+        <figure class="screen">
+          <img src="modelstash/shot-lora.jpg" alt="A ModelStash model page in the dark Darkroom look, with a pixel-art LoRA's sample pictures edge to edge" />
+          <figcaption><strong>Every model gets a proper page:</strong> its card, licence, files and samples, kept on your own disks.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Screens -->
+      <section class="showcase-section">
+        <p class="section-label">A look inside</p>
+        <h2 class="section-title">Know what you have, and what it needs.</h2>
+        <p class="showcase-lede">These are real screens from a ModelStash test hub, holding public models from Hugging Face and Ollama's library. Nothing is mocked up. They show all three looks; see below for which come with which licence.</p>
+        <div class="screen-grid">
+          <figure class="screen screen-wide">
+            <img src="modelstash/shot-quants.jpg" alt="A GGUF model page listing four quants, each with its GPU memory estimate, and a SHA-256 check on every file" loading="lazy" />
+            <figcaption><strong>What each quant needs to run.</strong> Every quant you hold shows the GPU memory it takes, every file is checked against its published hash, and the licence sits right beside it.</figcaption>
+          </figure>
+          <figure class="screen">
+            <img src="modelstash/shot-plan.jpg" alt="The add-model plan: licence, quant choice, file list, free space and who can see it, then Pull 1.12 GB" loading="lazy" />
+            <figcaption><strong>See the plan before you pull.</strong> The licence, the quant, the files a tool actually needs, the disk it lands on, and who can see it.</figcaption>
+          </figure>
+          <figure class="screen">
+            <img src="modelstash/shot-pulls.jpg" alt="The jobs page with a pull in progress at 257 of 491 MB and a list of finished pulls" loading="lazy" />
+            <figcaption><strong>Pulls you can watch.</strong> Every download is a job with live progress, and a stop button when you change your mind.</figcaption>
+          </figure>
+          <figure class="screen screen-wide">
+            <img src="modelstash/shot-dataset.jpg" alt="A dataset preview showing rows of images with their labels and file names" loading="lazy" />
+            <figcaption><strong>Datasets too.</strong> Preview the rows, pictures included, before you load a single one.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Looks -->
+      <section class="showcase-section">
+        <p class="section-label">Three looks</p>
+        <h2 class="section-title">Browse it like a feed, a gallery, or a paper.</h2>
+        <p class="showcase-lede">Each person picks their own look, in light or dark. Gallery comes with every hub; Darkroom and Index come with a business licence. Whichever you use, your hub's activity reads like a feed, and a proper table is always there when you need one.</p>
+        <div class="screen-grid screen-grid-3">
+          <figure class="screen">
+            <img src="modelstash/look-gallery.jpg" alt="The home feed in the Gallery look" loading="lazy" />
+            <figcaption><strong>Gallery</strong></figcaption>
+          </figure>
+          <figure class="screen">
+            <img src="modelstash/look-darkroom.jpg" alt="The home feed in the Darkroom look" loading="lazy" />
+            <figcaption><strong>Darkroom</strong></figcaption>
+          </figure>
+          <figure class="screen">
+            <img src="modelstash/look-index.jpg" alt="The home page in the Index look, with a serif masthead and a cover story" loading="lazy" />
+            <figcaption><strong>Index</strong></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Tools -->
+      <section class="showcase-section">
+        <div class="split">
+          <div>
+            <p class="section-label">Works with your tools</p>
+            <h2 class="section-title">Point your tools at the hub. That's it.</h2>
+            <p class="showcase-lede" style="margin-bottom: 0;">ModelStash speaks Hugging Face's API and is an Ollama registry, so transformers, diffusers, vLLM and Ollama fetch from your hub instead of the internet. Ask for a model it doesn't hold yet, and the pull-through cache fetches it once, streams it to everyone asking, and keeps it.</p>
+          </div>
+          <div class="code-card"><span class="c"># Any tool built on huggingface_hub</span>
+eval "$(mstash env)"
+python -c "from transformers import AutoModel; \
+  AutoModel.from_pretrained('Qwen/Qwen3-0.6B')"
+
+<span class="c"># The Hugging Face CLI</span>
+HF_ENDPOINT=http://hub.lan:8642 \
+  hf download openai/whisper-tiny
+
+<span class="c"># Ollama, from your hub</span>
+ollama pull --insecure hub.lan:8642/library/llama3.2:3b</div>
+        </div>
+      </section>
+
+      <!-- Phone -->
+      <section class="showcase-section">
+        <p class="section-label">On your phone</p>
+        <h2 class="section-title">Your stash, in your pocket.</h2>
+        <p class="showcase-lede">The web app works on any screen on your network, phone included. There's nothing to install on your devices.</p>
+        <div class="phone-row" style="max-width: 760px;">
+          <figure class="phone">
+            <img src="modelstash/phone-feed.jpg" alt="The ModelStash feed on a phone" loading="lazy" />
+            <figcaption><strong>The feed</strong>What your hub pulled, and what it made.</figcaption>
+          </figure>
+          <figure class="phone">
+            <img src="modelstash/phone-lora.jpg" alt="A model page with sample pictures on a phone" loading="lazy" />
+            <figcaption><strong>A model page</strong>Samples, card, files and licence.</figcaption>
+          </figure>
+          <figure class="phone">
+            <img src="modelstash/phone-quants.jpg" alt="What each quant needs to run, on a phone" loading="lazy" />
+            <figcaption><strong>What it needs</strong>GPU memory per quant, at a glance.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="features-section">
+        <p class="section-label">What it does</p>
+        <h2 class="section-title" style="margin-bottom: 0;">One copy of every model.<br>Every tool served.</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-dot"></div>
+            <div class="feature-text">
+              <strong>Pull from anywhere</strong>
+              <span>Hugging Face, CivitAI, Ollama's library, ModelScope, GitHub Releases or any address, with your tokens set once for the whole hub.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-dot"></div>
+            <div class="feature-text">
+              <strong>Keeps what upstream forgets</strong>
+              <span>Each model's card, licence and sample pictures with their settings. It tells you when upstream removes, updates or relicenses something you hold.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-dot"></div>
+            <div class="feature-text">
+              <strong>Serves every tool</strong>
+              <span>A Hugging Face-compatible API, an Ollama registry, plain resumable downloads and the <code>mstash</code> command line.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-dot"></div>
+            <div class="feature-text">
+              <strong>Checked, not just stored</strong>
+              <span>Every file is checked against its published hash, and risky file types are flagged before anyone uses them.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-dot"></div>
+            <div class="feature-text">
+              <strong>Know before you run</strong>
+              <span>What each quant needs in GPU memory, dataset previews, add-ons, and ComfyUI workflows with the files they load.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-dot"></div>
+            <div class="feature-text">
+              <strong>Stays yours</strong>
+              <span>Readable folders on the disks you choose, a NAS included. Sign-in by default, no telemetry, and it works air-gapped.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-dot"></div>
+            <div class="feature-text">
+              <strong>Ready for a business</strong>
+              <span>With a business licence: groups, storage quotas, pull approval, a licence policy with its report, an audit log viewer, and sign-in with OpenID Connect, SAML or LDAP.</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-dot"></div>
+            <div class="feature-text">
+              <strong>Installs in a minute</strong>
+              <span>One script for macOS, Linux or Windows with no admin rights needed, or a Docker container.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Get in touch -->
+      <section style="padding: 60px 0 80px; border-top: 1px solid var(--border);">
+        <div class="card" style="max-width: 680px; margin: 0 auto; text-align: center;">
+          <div style="font-size: 40px; margin-bottom: 16px;">📦</div>
+          <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 12px;">Coming soon.</h3>
+          <p style="color: var(--muted); font-size: 15px; line-height: 1.6; margin-bottom: 24px;">ModelStash is in its last round of testing. It will be free for personal use; business licensing will be announced at launch. Want to hear the moment it's out?</p>
+          <a href="mailto:arcadiaswsystems@gmail.com?subject=ModelStash%20early%20access" class="btn btn-secondary" style="margin: 0 auto;">Get notified at launch →</a>
+        </div>
+        <p style="text-align: center; color: var(--muted); font-size: 12px; margin-top: 24px;">Screens from a test hub. Sample pictures shown are from <a href="https://huggingface.co/Limbicnation/pixel-art-lora" target="_blank" rel="noopener noreferrer" style="color: inherit;">Limbicnation/pixel-art-lora</a> (Apache-2.0) on Hugging Face.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Arcadia SW Systems Inc.</strong> — Canada<br>
+        <a href="mailto:arcadiaswsystems@gmail.com" style="color: inherit;">arcadiaswsystems@gmail.com</a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="privacy/">Privacy Policy</a></li>
+        <li><a href="mailto:arcadiaswsystems@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

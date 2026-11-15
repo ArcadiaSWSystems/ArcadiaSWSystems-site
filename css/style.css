@@ -402,6 +402,14 @@ nav {
   color: #b45309;
 }
 
+/* Call to action on a coming-soon card that has no page of its own yet */
+.app-notify {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue-mid);
+}
+
 /* ── Status pill (e.g. "Under App Store Review") ── */
 .btn-pending {
   background: rgba(217, 119, 6, 0.1);
@@ -483,7 +491,11 @@ nav {
     padding: 60px 0 40px;
   }
   .app-hero .btn-group {
-    justify-content: center;
+    justify-content: center !important;
+  }
+  .app-hero-icon {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -767,6 +779,10 @@ nav {
   color: #aeb9c8;
   font-size: 13px;
   line-height: 1.5;
+}
+
+.case-shot-full {
+  grid-column: 1 / -1;
 }
 
 .case-shot-mobile {
@@ -1090,6 +1106,149 @@ footer {
   }
 
   .case-cta-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Showcase: real footage and screenshots on an app page ── */
+.showcase-section {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.showcase-section .section-title {
+  margin-bottom: 16px;
+}
+
+.showcase-lede {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 720px;
+  margin-bottom: 40px;
+}
+
+.phone-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.phone-row-videos {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  justify-content: center;
+  gap: 40px;
+}
+
+.phone {
+  margin: 0;
+}
+
+.phone video,
+.phone img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 26px;
+  border: 6px solid #15181d;
+  background: #15181d;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+.phone figcaption {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.phone figcaption strong {
+  display: block;
+  color: var(--text);
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.phone-hero {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* ── Showcase: wide desktop screenshots ── */
+.screen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.screen {
+  margin: 0;
+}
+
+.screen-wide {
+  grid-column: 1 / -1;
+}
+
+.screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.screen figcaption {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.screen figcaption strong {
+  color: var(--text);
+}
+
+@media (max-width: 720px) {
+  .screen-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.screen-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.code-card {
+  background: #0f1420;
+  color: #e6edf3;
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.75;
+  overflow-x: auto;
+  box-shadow: var(--shadow);
+  white-space: pre;
+}
+
+.code-card .c {
+  color: #8592a8;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .screen-grid-3,
+  .split {
     grid-template-columns: 1fr;
   }
 }

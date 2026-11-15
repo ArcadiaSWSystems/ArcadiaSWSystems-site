@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="ModelStash icon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16132e" />
+      <stop offset="55%" stop-color="#3a2fb8" />
+      <stop offset="100%" stop-color="#7d71f0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)" />
+
+  <!-- a stash of models: three stacked layers -->
+  <path d="M116,316 L256,386 L396,316" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.45" />
+  <path d="M116,256 L256,326 L396,256" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.7" />
+  <path d="M256,126 L396,196 L256,266 L116,196 Z" fill="#ffffff" stroke="#ffffff" stroke-width="24" stroke-linejoin="round" />
+</svg>

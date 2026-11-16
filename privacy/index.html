@@ -57,7 +57,7 @@
           <li><strong>QR Cute</strong> — custom QR code generator for iOS</li>
           <li><strong>Checkpoints</strong> — local version history for folders, for Mac</li>
           <li><strong>PixelPulse Groovebox</strong> — 8-bit and lo-fi music groovebox for Mac</li>
-          <li><strong>CityGrid</strong> — live, open-data map of Toronto (web app at <a href="https://citygrid.ca" target="_blank" rel="noopener noreferrer">citygrid.ca</a>)</li>
+          <li><strong>CityGrid</strong> — live, open-data map of Toronto and Peel Region (web app at <a href="https://citygrid.ca" target="_blank" rel="noopener noreferrer">citygrid.ca</a>)</li>
           <li><strong>Agent Fi for Mac</strong> — local-first AI assistant for program and project managers</li>
           <li><strong>Odds &amp; Mends</strong> — a cozy repair-shop mystery game for iPhone (in TestFlight beta)</li>
         </ul>
@@ -67,11 +67,13 @@
         <h2>Data We Collect</h2>
         <p>None of our apps require an account or login.</p>
         <p><strong>QR Cute, Checkpoints, PixelPulse Groovebox, and Odds &amp; Mends</strong> collect no data at all — they run entirely on your device and never send anything to a server. They do not track your location, use analytics or crash-reporting tools, or display advertising.</p>
-        <p><strong>CityGrid</strong> is a live web app with a server backend that serves public open-data feeds (transit, weather, closures, and similar civic data). It does not collect personal data either, but — unlike our fully local apps — it does use:</p>
+        <p><strong>CityGrid</strong> is a live web app with a server backend that serves public open-data feeds (transit, weather, closures, and similar civic data). It does not collect personal data: it never stores your IP address or anything else that identifies you, and its numbers count anonymous, randomly assigned IDs, not people. Unlike our fully local apps, it does use:</p>
         <ul>
           <li><strong>Cookieless, first-party analytics</strong> — aggregate usage metrics, without raw IP addresses, search text, third-party trackers, or personal profiles, to understand overall reach</li>
           <li><strong>Anonymous push notifications</strong> — if you opt in to a transit alert, your browser creates a push subscription used only to deliver that alert; it's tied to your browser, not to an account or identity</li>
+          <li><strong>Feedback, only if you send it</strong> — the Feedback form is optional. If you use it, CityGrid stores only what you choose to give: your message and rating, plus a name or email only if you add one so we can reply. It is kept apart from the anonymous analytics.</li>
         </ul>
+        <p><strong>How CityGrid reaches you.</strong> Every visit to CityGrid passes through Cloudflare, a network company that protects our server from attacks. Like any service of its kind, Cloudflare handles each request in transit, including your IP address and browser details, under its own privacy policy, and this may involve processing outside Canada. That part is outside our control. CityGrid itself sets no cookies, and we keep Cloudflare's optional features that add cookies or scripts switched off. The background map loads directly from CARTO, which, like any site your browser loads from, sees your IP address and the map area on your screen. CityGrid's full privacy notice, with every detail, is at <a href="https://citygrid.ca/privacy" target="_blank" rel="noopener noreferrer">citygrid.ca/privacy</a>.</p>
         <p><strong>Agent Fi for Mac</strong> is local-first, not local-only: by default nothing leaves your Mac, but if you connect a cloud AI provider or another external service, some data is sent to the destination you've configured. This is different enough from our other apps that it has its own section below — see <a href="#agent-fi">Agent Fi for Mac</a>.</p>
         <p>None of our apps use third-party advertising or third-party tracking SDKs, and none of them sell your data.</p>
 
